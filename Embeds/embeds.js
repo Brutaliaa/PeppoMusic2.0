@@ -5,27 +5,31 @@ const { OWNER_ID } = process.env;
 
 //#region Basic Embed
 /**
+ * Creates an embed with flexible options.
  *
- * @param {string} nameCommand
- * The Name of the command, used for the author name.
- * @param {string} [userURL]
- * Optional, it's the URL of the user avatar, used for the author icon.
- * @param {string} description
- * The description of the embed.
- * @param {string|number} color
- * The color of the embed. Can be a string or a number.
+ * @param {Object} options
+ * @param {string} [options.nameCommand] - Name of the command for author title.
+ * @param {string} [options.userURL] - URL for the author's icon.
+ * @param {string} [options.description] - Description of the embed.
+ * @param {string|number} [options.color] - Color of the embed.
  * @returns {EmbedBuilder}
- * Creates and returns an EmbedBuilder instance with the specified properties.
  */
-function embeds(nameCommand, userURL, description, color) {
-  return new EmbedBuilder()
+function embeds({
+  nameCommand = "",
+  userURL,
+  description = "",
+  color = "Random",
+} = {}) {
+  const embed = new EmbedBuilder()
     .setAuthor({
-      name: `${nameCommand[0].toUpperCase() + nameCommand.slice(1)} Command`,
-      iconURL: userURL ? userURL : undefined,
+      name: `${nameCommand[0]?.toUpperCase() + nameCommand.slice(1)} Command`,
+      iconURL: userURL || undefined,
     })
     .setDescription(description)
-    .setColor(color)
     .setTimestamp();
+
+  if (color) embed.setColor(color);
+  return embed;
 }
 //#endregion
 

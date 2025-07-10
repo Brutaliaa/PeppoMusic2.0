@@ -13,12 +13,12 @@ module.exports = {
    * @param {CommandInteraction} interaction
    */
   async execute(interaction) {
-    const embed = embeds(
-      "ping",
-      interaction.user.displayAvatarURL(),
-      "Calculating the ping of the bot...",
-      "Red"
-    );
+    const embed = embeds({
+      nameCommand: interaction.commandName,
+      userURL: interaction.user.displayAvatarURL(),
+      description: "Calculating ping...",
+      color: "Red",
+    });
 
     await interaction.reply({
       embeds: [embed],

@@ -14,7 +14,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "push": "node testing/push-test.js"
   },
   "repository": {
     "type": "git",

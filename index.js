@@ -63,12 +63,12 @@ client.on("interactionCreate", async (interaction) => {
   const command = client.commands.get(interaction.commandName);
   if (!command) return;
 
-  const exceptionThrowed = embeds(
-    "exception",
-    interaction.user.displayAvatarURL(),
-    null,
-    "Red"
-  );
+  const exceptionThrowed = embeds({
+    nameCommand: interaction.commandName,
+    userURL: interaction.user.displayAvatarURL(),
+    description: `An error occurred while executing the command \`${interaction.commandName}\`.`,
+    color: "Red",
+  });
 
   try {
     await command.execute(interaction);
