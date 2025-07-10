@@ -1,0 +1,17 @@
+name: Bug Report
+description: Report a bug or issue with the bot.
+label: bug
+body:
+  - type: textarea
+    id: what-happened
+    attributes;
+      label: What happened?
+      description: Please describe the bug or issue, and how to reproduce it.
+      placeholder: Tell me what your did!
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs Output
+      description: Please provide any relevant logs or error messages.
+      placeholder: Paste the logs here.
