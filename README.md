@@ -48,7 +48,7 @@ pnpm start
 ## Features
 
 This bot has error handlers where it will sends you a message when an error has occured. Don't
-forget to put your Discord ID in the env file to have this feature. Otherwise, it will just skips it.
+forget to put your Discord ID in the [env file](./private/privateTemplate.env) to have this feature. Otherwise, it will just skips it.
 
 ```env
 OWNER_ID=123456789012345678
