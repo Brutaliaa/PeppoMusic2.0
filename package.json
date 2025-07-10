@@ -1,0 +1,35 @@
+{
+  "name": "PeppoMusic 2.0",
+  "version": "2.0.0",
+  "description": "Yet another music bot for Discord.js. Hopefully, this one doesn't break.",
+  "main": "index.js",
+  "keywords": [
+    "discord",
+    "bot",
+    "music",
+    "discord.js"
+  ],
+  "author": "brutaliaa",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brutaliaa/PeppoMusic2.0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Brutaliaa/PeppoMusic2.0/issues"
+  },
+  "homepage": "https://github.com/Brutaliaa/PeppoMusic2.0#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.0"
+  }
+}

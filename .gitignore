@@ -137,3 +137,9 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Private file used for bot development. A template is provided in the repository.
+private/private.env
+
+# Images for the bot
+private/images
