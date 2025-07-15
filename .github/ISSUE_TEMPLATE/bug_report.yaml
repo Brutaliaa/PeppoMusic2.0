@@ -1,13 +1,13 @@
 name: Bug Report
 description: Report a bug or issue with the bot.
-labels: bug
+labels: bug # use "labels" (array or string), not "label"
 body:
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
       description: Please describe the bug or issue, and how to reproduce it.
-      placeholder: Tell me what your did!
+      placeholder: Tell me what you did!
     required: true
   - type: textarea
     id: logs
@@ -15,3 +15,4 @@ body:
       label: Logs Output
       description: Please provide any relevant logs or error messages.
       placeholder: Paste the logs here.
+    required: false
