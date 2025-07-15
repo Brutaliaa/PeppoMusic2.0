@@ -7,7 +7,7 @@ const {
 } = require("discord.js");
 const dotenv = require("dotenv");
 const fs = require("fs");
-const { embeds } = require("./Embeds/embeds.js");
+const { embeds } = require("./Embeds/Utilities/embeds.js");
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],

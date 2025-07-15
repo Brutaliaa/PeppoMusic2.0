@@ -1,6 +1,6 @@
 //#region Imports
 const { CommandInteraction, SlashCommandBuilder } = require("discord.js");
-const { embeds } = require("../../Embeds/embeds.js");
+const { embeds } = require("../../Embeds/Utilities/embeds.js");
 //#endregion
 
 //#region Execute Function
