@@ -8,7 +8,7 @@ const {
 const dotenv = require("dotenv");
 const fs = require("fs");
 const { embeds } = require("./Embeds/Utilities/embeds.js");
-
+const { resetMusicState } = require("./music/player.js");
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
   presence: {
@@ -108,4 +108,15 @@ client.once("ready", () => {
 });
 
 client.login(TOKEN);
+
+client.on("voiceStateUpdate", (oldState, newState) => {
+  // if the user left the voice channel, reset the music state
+  if (
+    oldState.channelId &&
+    !newState.channelId &&
+    oldState.member.id === client.user.id
+  ) {
+    resetMusicState();
+  }
+});
 //#endregion

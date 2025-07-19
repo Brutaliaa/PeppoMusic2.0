@@ -143,3 +143,6 @@ private/private.env
 
 # Images for the bot
 private/images
+
+# Cookies for the bot
+private/cookies.json
